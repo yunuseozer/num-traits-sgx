@@ -466,7 +466,7 @@ pub trait Real: Num + Copy + NumCast + PartialOrd + Neg<Output = Self> {
     /// assert!(abs_difference_x < 1e-10);
     /// assert!(abs_difference_y < 1e-10);
     /// ```
-    fn abs_sub(self, other: Self) -> Self;
+    //fn abs_sub(self, other: Self) -> Self;
 
     /// Take the cubic root of a number.
     ///
@@ -811,7 +811,7 @@ impl<T: Float> Real for T {
         Float::to_radians(self) -> Self;
         Float::max(self, other: Self) -> Self;
         Float::min(self, other: Self) -> Self;
-        Float::abs_sub(self, other: Self) -> Self;
+        //Float::abs_sub(self, other: Self) -> Self;
         Float::cbrt(self) -> Self;
         Float::hypot(self, other: Self) -> Self;
         Float::sin(self) -> Self;

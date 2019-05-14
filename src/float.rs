@@ -1489,7 +1489,7 @@ pub trait Float: Num + Copy + NumCast + PartialOrd + Neg<Output = Self> {
     /// assert!(abs_difference_x < 1e-10);
     /// assert!(abs_difference_y < 1e-10);
     /// ```
-    fn abs_sub(self, other: Self) -> Self;
+    //fn abs_sub(self, other: Self) -> Self;
 
     /// Take the cubic root of a number.
     ///
@@ -1823,11 +1823,11 @@ macro_rules! float_impl_std {
                 max_value() -> $T::MAX;
             }
 
-            #[inline]
-            #[allow(deprecated)]
-            fn abs_sub(self, other: Self) -> Self {
-                <$T>::abs_sub(self, other)
-            }
+            //#[inline]
+            //#[allow(deprecated)]
+            //fn abs_sub(self, other: Self) -> Self {
+            //    <$T>::abs_sub(self, other)
+            //}
 
             #[inline]
             fn integer_decode(self) -> (u64, i16, i8) {
